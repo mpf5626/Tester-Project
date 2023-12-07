@@ -5,10 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+
 </head>
 <body>
-    <h1>Weather in {{ weather_data.city }}</h1>
-    <p>Temperature: {{ weather_data.temperature }}°C</p>
-    <p>Description: {{ weather_data.description }}</p>
+    <div class="container">
+        <h1>Weather in {{ weather_data.city }}</h1>
+        <p>Temperature: {{ weather_data.temperature }}°C</p>
+        <p>Description: {{ weather_data.description }}</p>
+        <p>Humidity: {{ weather_data.humidity }}%</p>
+        <p>Wind Speed: {{ weather_data.wind_speed }} m/s</p>
+        <img src="http://openweathermap.org/img/w/{{ weather_data.icon }}.png" alt="Weather Icon">
+    </div>
 </body>
 </html>
