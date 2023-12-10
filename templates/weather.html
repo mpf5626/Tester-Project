@@ -13,11 +13,15 @@
 <body>
     <div class="container">
         <h1>Weather in {{ weather_data.city }}</h1>
-        <p>Temperature: {{ weather_data.temperature }}°C</p>
+        <p>Temperature: {{ weather_data.temperature_celsius }}°C / {{ weather_data.temperature_fahrenheit }}°F</p>
+        <p>Precipitation: {{ weather_data.precipitation_percent }} mm/h</p>
         <p>Description: {{ weather_data.description }}</p>
         <p>Humidity: {{ weather_data.humidity }}%</p>
         <p>Wind Speed: {{ weather_data.wind_speed }} m/s</p>
+        <p>Current Time: {{ weather_data.current_time }}</p>
+        </div>
         <img src="http://openweathermap.org/img/w/{{ weather_data.icon }}.png" alt="Weather Icon">
     </div>
+
 </body>
 </html>
